@@ -15,3 +15,15 @@ test("handles an invalid discount rate gracefully", () => {
 test("handles edge case with price of 0", () => {
   expect(calculateDiscount(0, 0.2)).toBe(0);
 });
+
+describe("should filter products ", () => {
+  test("should filter the products based on callback condtion", () => {
+    const expenciveProducts = filterProducts(
+      (products) => products.price > 100
+    );
+    expect(expenciveProducts).toEqual([
+      { name: "Laptop", price: 1000 },
+      { name: "Monitor", price: 50 },
+    ]);
+  });
+});

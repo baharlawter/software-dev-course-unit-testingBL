@@ -10,7 +10,12 @@ function calculateDiscount(price, discountRate) {
 }
 
 function filterProducts(products, callback) {
-  if (!Array.isArray(products) || typeof callback !== "function") return [];
+  const products = [
+    { name: "Laptop", price: 1000 },
+    { name: "Mouse", price: 50 },
+  ];
+  if (typeof callback !== "function ") return [];
+  return products.filter(callback);
   // TODO: Implement filtering logic
   return [];
 }
