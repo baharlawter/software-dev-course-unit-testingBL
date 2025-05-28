@@ -25,6 +25,7 @@ function sortInventory(inventory, key) {
   // TODO: Implement sorting logic
   return [];
 }
+
 module.exports = {
   calculateDiscount,
   filterProducts,

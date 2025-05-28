@@ -27,3 +27,7 @@ describe("should filter products ", () => {
     ]);
   });
 });
+
+test("should return an empty array when key is not a string  ", () => {
+  expect(sortInventory(inventory, 123)).toEqual([]);
+});
